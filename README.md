@@ -2,7 +2,7 @@
 
 > simple contact management crud made with flask and file operations
 
-![Image preview](/showcase.png)
+![Image preview](showcase.png)
 
 ## Installation and usage
 
