@@ -1,0 +1,126 @@
+.search-container {
+  height: 510px;
+  width: 670px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+}
+
+.title {
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.7rem 0 0 0;
+}
+
+.title > span {
+  font-size: 17px;
+}
+
+#search {
+  width: 600px;
+  border: none;
+  height: 45px;
+  border-radius: 0px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+#search:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #eee;
+  outline: 0;
+  box-shadow: none;
+  border-bottom: 1px solid blue;
+}
+
+.box-container {
+  height: 400px;
+  width: 600px;
+  overflow: hidden;
+  overflow-y: scroll;
+  background-color: #fff;
+}
+
+.item-list {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  border-bottom: 0.33px solid #f1f1f1;
+}
+
+.item-list .item-avatar {
+  margin: 0 1.5rem;
+}
+
+.item-list .item-avatar img {
+  background-color: #ccc;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+
+.item-list .item-info p {
+  margin: 0;
+  padding: 0;
+}
+
+.item-info .user-name {
+  font-size: 19px;
+  color: #232222;
+}
+
+.item-info .user-phone {
+  font-style: italic;
+  font-size: 13px;
+  color: #969696;
+}
+
+.item-list .item-buttons {
+  margin-left: auto;
+  margin-right: 1.5rem;
+}
+
+.item-list .item-buttons a {
+  margin: 0 .80rem;
+}
+
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}

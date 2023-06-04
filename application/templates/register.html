@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+<!-- Head import -->
+{% block head %}
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='register.css') }}"
+  />
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" 
+    integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" 
+    crossorigin="anonymous" 
+  />
+
+{% endblock %}
+
+<!-- Title -->
+{% block title %}Register{% endblock %}
+
+<!-- Content -->
+{% block content %}
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+
+      <!-- Icon -->
+      <div class="fadeIn first title">
+        Register Contact
+      </div>
+
+      <!-- Login Form -->
+      <form action="/add" method="POST">
+        <input type="text" id="email" class="fadeIn second" name="name" placeholder="Name">
+        <input type="text" id="email" class="fadeIn third" name="gender" placeholder="Gender">
+        <input type="text" id="email" class="fadeIn third" name="phone" placeholder="Phone number">
+        <input type="text" id="email" class="fadeIn third" name="avatar" placeholder="Avatar link">
+        <input type="submit" class="fadeIn fourth" value="Add contact">
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

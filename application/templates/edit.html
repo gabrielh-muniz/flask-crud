@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+<!-- Head import -->
+{% block head %}
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='register.css') }}"
+  />
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" 
+    integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" 
+    crossorigin="anonymous" 
+  />
+
+{% endblock %}
+
+<!-- Title -->
+{% block title %}Register{% endblock %}
+
+<!-- Content -->
+{% block content %}
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+
+      <!-- Icon -->
+      <div class="fadeIn first title">
+        Register Contact
+      </div>
+
+      <!-- Login Form -->
+      <form action="/edit/{{ contact.get('id') }}" method="POST">
+        <input type="text" id="email" class="fadeIn second" name="name" value={{ contact.get('name') }}>
+        <input type="text" id="email" class="fadeIn third" name="gender" value={{ contact.get('gender') }}>
+        <input type="text" id="email" class="fadeIn third" name="phone" value={{ contact.get('phone') }}>
+        <input type="text" id="email" class="fadeIn third" name="avatar" value={{ contact.get('avatar') }}>
+        <input type="submit" class="fadeIn fourth" value="Edit contact">
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
